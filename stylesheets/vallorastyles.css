@@ -1,0 +1,9 @@
+body { color: #003366; font-family: Verdana, Geneva, Arial, sans-serif; font-size: large; }
+
+h1, h2 { color: #ff9933; }
+
+body h1 { font-size: 1.5em; }
+
+body h2 { font-size: 1.2em; }
+
+blockquote { font-style: italic; }

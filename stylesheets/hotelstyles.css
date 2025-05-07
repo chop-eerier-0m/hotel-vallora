@@ -1,0 +1,294 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+h1,
+h2 {
+    color: #2c3e50;
+}
+
+h1 {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header,
+footer {
+    background-color: #015e73;
+    padding: 1rem;
+}
+
+header>*,
+footer>* {
+    color: white;
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
+
+header p.subtitle {
+    font-size: smaller;
+    margin-bottom: revert;
+    margin-top: 8px;
+}
+
+img {
+    display: block;
+}
+
+div.gericht {
+    align-items: start;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 100px 1fr auto;
+    margin: 0 auto 2rem auto;
+    max-width: 786px;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+div.gericht::before {
+    content: "";
+    background-color: #eee;
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+div.gericht:hover {
+    cursor: pointer;
+}
+
+div.gericht:hover::before {
+    width: 100%;
+    transition: width 0.4s ease-in-out;
+}
+
+div.gericht h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 0.5rem;
+    margin-top: auto;
+}
+
+div.gericht img {
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+div.gericht blockquote {
+    font-style: italic;
+    margin: 0;
+}
+
+div.gericht .preis {
+    color: #b30000;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+section.getraenk-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 2rem;
+}
+
+div.getraenk {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-rows: auto 1fr auto auto;
+    gap: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+div.getraenk:hover {
+    cursor: pointer;
+}
+
+div.getraenk:nth-child(even):hover {
+    transform: rotateZ(2deg) scale(1.03);
+}
+
+div.getraenk:nth-child(odd):hover {
+    transform: rotateZ(-2deg) scale(1.03);
+}
+
+div.getraenk img {
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    object-fit: cover;
+    width: 100%;
+}
+
+div.getraenk h2 {
+    color: #b30000;
+    font-size: 1.2rem;
+    margin: 0.2rem 0;
+}
+
+div.getraenk p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+div.kategorie {
+    background-color: #eee;
+    border-radius: 6px;
+    color: #333;
+    display: inline-block;
+    font-size: 0.8rem;
+    margin-top: auto;
+    padding: 0.3rem 0.6rem;
+}
+
+div.getränk .preis {
+    color: #2c3e50;
+    display: block;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    text-align: right;
+}
+
+section.animated {
+    margin-bottom: 5em;
+    animation: wiggle 2s ease-in-out infinite;
+}
+
+section.animated picture {
+    animation: jump .6s ease-in-out infinite;
+    display: block;
+}
+
+section.animated img {
+    animation: flip .5s steps(1, end) infinite;
+}
+
+section.contact-card {
+    background-color: #ffffff;
+    padding: 1rem;
+    max-width: 786px;
+    margin: 1rem 4px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+section.contact-card p,
+section.contact-card details,
+section.contact-card iframe {
+    border-radius: 8px;
+}
+
+section.contact-card p,
+section.contact-card details {
+    background-color: #e0fbfb;
+    padding: 1em;
+}
+
+section.contact-card h2,
+section.contact-card p {
+    color: #333;
+}
+
+section.contact-card h2{
+    font-size: revert;
+}
+
+section.contact-card p {
+    margin: 8px auto;
+}
+
+section.contact-card details {
+    margin-top: 24px;
+    border: 1px solid #ccc;
+}
+
+section.contact-card summary {
+    color: #015e73;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1em;
+}
+
+section.contact-card address {
+    font-style: unset;
+}
+
+section.contact-card figure {
+    margin: auto;
+    margin-top: 32px;
+    border-radius: 8px;
+}
+
+#google-maps {
+    display: block;
+}
+
+#apple-maps {
+    display: none;
+}
+
+@supports (-webkit-touch-callout: none) {
+    #google-maps {
+        display: none;
+    }
+
+    #apple-maps {
+        display: block;
+    }
+}
+
+@keyframes flip {
+
+    0%,
+    100% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scaleX(-1);
+    }
+}
+
+@keyframes jump {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(3rem);
+    }
+}
+
+@keyframes wiggle {
+
+    0%,
+    100% {
+        transform: translateX(0)
+    }
+
+    50% {
+        transform: translateX(25%);
+    }
+}
