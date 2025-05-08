@@ -1,47 +1,22 @@
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-body {
-    line-height: 1.6;
-    margin: 0;
-    background-color: #f4f4f4;
-}
+body { background-color: #f4f4f4; font-family: 'Roboto', Verdana, Geneva, Arial, sans-serif; line-height: 1.6; margin: 0; }
 
-h1,
-h2 {
-    color: #2c3e50;
-}
+.emoji { font-family: 'Twemoji', 'Apple Color Emoji', sans-serif; }
 
-h1 {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-}
+main { padding: 0 4px; }
 
-header,
-footer {
-    background-color: #015e73;
-    padding: 1rem;
-}
+h1, h2 { color: #2c3e50; }
 
-header>*,
-footer>* {
-    color: white;
-    display: block;
-    width: fit-content;
-    margin: auto;
-}
+h1 { max-width: 1000px; margin-left: auto; margin-right: auto; }
 
-header p.subtitle {
-    font-size: smaller;
-    margin-bottom: revert;
-    margin-top: 8px;
-}
+header, footer { background-color: #015e73; padding: 1rem; }
 
-img {
-    display: block;
-}
+header>*, footer>* { color: white; display: block; width: fit-content; margin: auto; }
+
+header p.subtitle { font-size: smaller; margin-bottom: revert; margin-top: 8px; }
+
+img { display: block; }
 
 div.gericht {
     align-items: start;
@@ -68,39 +43,17 @@ div.gericht::before {
     z-index: -1;
 }
 
-div.gericht:hover {
-    cursor: pointer;
-}
+div.gericht:hover { cursor: pointer; }
 
-div.gericht:hover::before {
-    width: 100%;
-    transition: width 0.4s ease-in-out;
-}
+div.gericht:hover::before { width: 100%; transition: width 0.4s ease-in-out; }
 
-div.gericht h2 {
-    grid-column: 1 / -1;
-    margin-bottom: 0.5rem;
-    margin-top: auto;
-}
+div.gericht h2 { grid-column: 1 / -1; margin-bottom: 0.5rem; margin-top: auto; }
 
-div.gericht img {
-    aspect-ratio: 1 / 1;
-    border-radius: 8px;
-    display: block;
-    max-width: 100%;
-    object-fit: cover;
-}
+div.gericht img { aspect-ratio: 1 / 1; border-radius: 8px; display: block; max-width: 100%; object-fit: cover; }
 
-div.gericht blockquote {
-    font-style: italic;
-    margin: 0;
-}
+div.gericht blockquote { font-style: italic; margin: 0; }
 
-div.gericht .preis {
-    color: #b30000;
-    font-weight: bold;
-    margin-top: 0.5rem;
-}
+div.gericht .preis { color: #b30000; font-weight: bold; margin-top: 0.5rem; }
 
 section.getraenk-grid {
     display: grid;
@@ -122,35 +75,17 @@ div.getraenk {
     transition: transform 0.3s ease;
 }
 
-div.getraenk:hover {
-    cursor: pointer;
-}
+div.getraenk:hover { cursor: pointer; }
 
-div.getraenk:nth-child(even):hover {
-    transform: rotateZ(2deg) scale(1.03);
-}
+div.getraenk:nth-child(even):hover { transform: rotateZ(2deg) scale(1.03); }
 
-div.getraenk:nth-child(odd):hover {
-    transform: rotateZ(-2deg) scale(1.03);
-}
+div.getraenk:nth-child(odd):hover { transform: rotateZ(-2deg) scale(1.03); }
 
-div.getraenk img {
-    aspect-ratio: 1 / 1;
-    border-radius: 8px;
-    object-fit: cover;
-    width: 100%;
-}
+div.getraenk img { aspect-ratio: 1 / 1; border-radius: 8px; object-fit: cover; width: 100%; }
 
-div.getraenk h2 {
-    color: #b30000;
-    font-size: 1.2rem;
-    margin: 0.2rem 0;
-}
+div.getraenk h2 { color: #b30000; font-size: 1.2rem; margin: 0.2rem 0; }
 
-div.getraenk p {
-    color: #555;
-    font-size: 0.95rem;
-}
+div.getraenk p { color: #555; font-size: 0.95rem; }
 
 div.kategorie {
     background-color: #eee;
@@ -170,125 +105,75 @@ div.getränk .preis {
     text-align: right;
 }
 
-section.animated {
-    margin-bottom: 5em;
-    animation: wiggle 2s ease-in-out infinite;
-}
+section.animated { margin-bottom: 5em; animation: wiggle 2s ease-in-out infinite; }
 
-section.animated picture {
-    animation: jump .6s ease-in-out infinite;
-    display: block;
-}
+section.animated picture { animation: jump .6s ease-in-out infinite; display: block; }
 
-section.animated img {
-    animation: flip .5s steps(1, end) infinite;
-}
+section.animated img { animation: flip .5s steps(1, end) infinite; }
 
 section.contact-card {
     background-color: #ffffff;
-    padding: 1rem;
-    max-width: 786px;
-    margin: 1rem 4px;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: monospace;
+    margin: 1rem auto;
+    max-width: 786px;
+    padding: 1rem;
 }
 
-section.contact-card p,
-section.contact-card details,
-section.contact-card iframe {
-    border-radius: 8px;
-}
+section.contact-card p, section.contact-card details { border-radius: 8px; }
 
-section.contact-card p,
-section.contact-card details {
-    background-color: #e0fbfb;
-    padding: 1em;
-}
+section.contact-card p, section.contact-card details { background-color: #e0fbfb; padding: 1em; }
 
-section.contact-card h2,
-section.contact-card p {
-    color: #333;
-}
+section.contact-card h2, section.contact-card p { color: #333; }
 
-section.contact-card h2{
-    font-size: revert;
-}
+section.contact-card h2{ font-size: revert; }
 
-section.contact-card p {
-    margin: 8px auto;
-}
+section.contact-card p { margin: 8px auto; }
 
-section.contact-card details {
-    margin-top: 24px;
-    border: 1px solid #ccc;
-}
+section.contact-card details { margin-top: 24px; border: 1px solid #ccc; }
 
-section.contact-card summary {
-    color: #015e73;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 1em;
-}
+section.contact-card summary { color: #015e73; cursor: pointer; }
 
-section.contact-card address {
-    font-style: unset;
-}
+section.contact-card details[open]>summary { border-bottom: 1px solid #ccc; padding-bottom: 1em; }
 
-section.contact-card figure {
-    margin: auto;
-    margin-top: 32px;
-    border-radius: 8px;
-}
+section.contact-card address { font-style: unset; }
 
-#google-maps {
-    display: block;
-}
+#embedded-map { margin: 32px auto 0; overflow: hidden; }
 
-#apple-maps {
-    display: none;
-}
+#embedded-map iframe { border-radius: 8px; border: 0; height: 450px; width: 100%; }
+
+#google-maps { display: block; }
+
+#apple-maps { display: none; }
 
 @supports (-webkit-touch-callout: none) {
-    #google-maps {
-        display: none;
-    }
+    #google-maps { display: none; }
 
-    #apple-maps {
-        display: block;
-    }
+    #apple-maps { display: block; }
+}
+
+@media (max-width: 768px) {
+    section.contact-card figure{ display: none; }
 }
 
 @keyframes flip {
 
-    0%,
-    100% {
-        transform: scaleX(1);
-    }
+    0%, 100% { transform: scaleX(1); }
 
-    50% {
-        transform: scaleX(-1);
-    }
+    50% { transform: scaleX(-1); }
 }
 
 @keyframes jump {
 
-    0%,
-    100% {
-        transform: translateY(0);
-    }
+    0%, 100% { transform: translateY(0); }
 
-    50% {
-        transform: translateY(3rem);
-    }
+    50% { transform: translateY(3rem); }
 }
 
 @keyframes wiggle {
 
-    0%,
-    100% {
-        transform: translateX(0)
-    }
+    0%, 100% { transform: translateX(0) }
 
-    50% {
-        transform: translateX(25%);
-    }
+    50% { transform: translateX(25%); }
 }
