@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheets/hotelstyles.css">
+    <link rel="stylesheet" href="stylesheets/vallorastyles.css">
+    <title>Kontakt</title>
+</head>
+
+<body>
+    <main>
+        <h2>Reservierungsanfrage</h2>
+        <form action="">
+            <div class="name">
+                <div>
+                    <label for="vorname">vorname:</label>
+                    <input type="text" id="vorname" name="vorname" required>
+                </div>
+                <div>
+                    <label for="nachname">nachname:</label>
+                    <input type="text" name="nachname" id="nachname" required>
+                </div>
+            </div>
+            <label for="email">E-Mail-Adresse:</label>
+            <input type="text" name="email" id="email" required>
+            <label for="telefon">Telefonnummer:</label>
+            <input type="text" name="telefon" id="telefon" required>
+            <label for="adresszeile-1">Adresszeile 1:</label>
+            <input type="text" name="adresszeile-1" id="adresszeile-1" required>
+            <label for="adresszeile-2">Addresszeile 2:</label>
+            <input type="text" name="adresszeile-2" id="adresszeile-2">
+            <div class="name">
+                <div>
+                    <label for="plz">Postleitzahl:</label>
+                    <input type="text" name="plz" id="plz" required>
+                </div>
+                <div>
+                    <label for="ort">Ort:</label>
+                    <input type="text" name="ort" id="ort" required>
+                </div>
+            </div>
+            <label for="land">Land:</label>
+            <input type="text" name="land" id="Land" required>
+            <label for="anzahl">Anzahl der Personen</label>
+            <input type="number" name="anzahl" id="anzahl" min="1" required>
+            <label for="">Buchungszeitraum:</label>
+            <div class="dates">
+                <div>
+                    <label for="startdatum">Von:</label>
+                    <input type="date" name="startdatum" id="startdatum" required>
+                </div>
+                <div>
+                    <label for="enddatum">Bis:</label>
+                    <input type="date" name="enddatum" id="enddatum" required>
+                </div>
+            </div>
+            <label for="zimmerkategorie">Zimmerkategorie:</label>
+            <select name="zimmerkategorie" id="zimmerkategorie">
+                <option value="">Bitte wählen</option>
+                <option value="single">Single</option>
+                <option value="double">Double</option>
+                <option value="deluxe">Deluxe</option>
+            </select>
+            <button type="submit">Reservierungsanfrage absenden</button>
+        </form>
+        <h3>Unsere Zimmerkategorien im Überblick</h3>
+        <!-- ich weiß nicht wieso die ersten beiden bilder so lowres sind -->
+        <section class="getraenk-grid">
+            <div class="getraenk">
+                <img src="https://static.wikia.nocookie.net/spongebob/images/6/6d/PatrickHouseOpenedStock.png"
+                    alt="Single Zimmer">
+                <h4>Single</h4>
+                <p>Einzelzimmer mit gemütlichen Bett, Arbeitsblatt, Bad mit Dusche und kostenfreien WLAN - ideal für
+                    Alleinreisende.</p>
+            </div>
+            <div class="getraenk">
+                <img src="https://static.wikia.nocookie.net/crossovia/images/e/e4/Spongebob-pineapple-house.webp"
+                    alt="Double Zimmer">
+                <h4>Double</h4>
+                <p>Doppelzimmer mit großem Bett, Sitzbereich, Bad mit Badewanne und moderner Ausstattung - für Paare
+                    oder Freunde.</p>
+            </div>
+            <div class="getraenk">
+                <img src="https://cdn.spongebobwiki.org/thumb/3/32/Squidward%27s_house_Scavenger_Pants.png/1200px-Squidward%27s_house_Scavenger_Pants.png"
+                    alt="Deluxe Zimmer">
+                <h4>Deluxe</h4>
+                <p>Luxuriöses Zimmer mit King-Size-Bett, Balkon, Minibar, großem Bad, exklusivem Design - für höchste
+                    Ansprüche.</p>
+            </div>
+        </section>
+    </main>
+    <object data="../components/footer.html" type="text/html" width="100%" height="56px" style="border: none;"></object>
+</body>
+
+</html>

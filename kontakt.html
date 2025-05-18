@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheets/hotelstyles.css">
+    <link rel="stylesheet" href="stylesheets/vallorastyles.css">
+    <title>Kontakt</title>
+</head>
+
+<body>
+    <main>
+        <h2>Kontaktformular</h2>
+        <form action="">
+            <label for="">Priorität:</label>
+            <label for=""><input type="radio" name="priority" value="normal" checked> normal</label>
+            <label for=""><input type="radio" name="priority" value="mittel"> mittel</label>
+            <label for=""><input type="radio" name="priority" value="hoch"> hoch</label>
+
+            <label for="vorname">vorname:</label>
+            <input type="text" id="vorname" name="vorname" required>
+            <label for="nachname">nachname:</label>
+            <input type="text" name="nachname" id="nachname" required>
+            <label for="email">E-Mail-Adresse:</label>
+            <input type="text" name="email" id="email" required>
+            <label for="thema">Themenbereich:</label>
+            <select name="thema" id="thema" required>
+                <option value="">Bitte wählen</option>
+                <option value="buchungsanfrage">buchungsanfrage</option>
+                <option value="bestehende-buchung">bestehende-buchung</option>
+                <option value="stornierung">stornierung</option>
+                <option value="freizeit">Freizeit und Unterhaltung</option>
+                <option value="sonstiges">sonstiges</option>
+            </select>
+            <label for="buchungsnummer">buchungsnummer (optional):</label>
+            <input type="text" name="buchungsnummer" id="buchungsnummer" placeholder="z. B. A202413E">
+            <label for="nachricht">Ihre nachricht:</label>
+            <textarea name="nachricht" id="nachricht" required
+                placeholder="Geben Sie Ihre nachricht ein...">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore sint voluptatibus beatae ipsam inventore quam nihil cupiditate, minus quis, consequuntur, et atque doloribus. Reprehenderit iure fuga incidunt natus quasi labore laboriosam aut libero excepturi! Dicta autem illum nemo nobis fuga, minus, tempora cupiditate reprehenderit, magni dolor iusto unde id voluptatem. Dolores, ipsam expedita aspernatur quisquam animi pariatur hic explicabo ducimus perferendis quas ad laudantium, nulla eos. Perspiciatis quis aut vitae nesciunt reiciendis, corrupti atque alias iusto doloribus tempore eos odio eligendi deleniti ullam dignissimos, assumenda at voluptate quas laborum itaque explicabo. Tenetur itaque corrupti ducimus ab error non, soluta excepturi.</textarea>
+            <button type="submit">Absenden</button>
+        </form>
+    </main>
+    <object data="../components/footer.html" type="text/html" width="100%" height="56px" style="border: none;"></object>
+</body>
+
+</html>

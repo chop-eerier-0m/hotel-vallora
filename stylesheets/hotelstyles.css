@@ -97,7 +97,7 @@ div.kategorie {
     padding: 0.3rem 0.6rem;
 }
 
-div.getränk .preis {
+div.getraenk .preis {
     color: #2c3e50;
     display: block;
     font-weight: bold;
@@ -110,6 +110,27 @@ section.animated { margin-bottom: 5em; animation: wiggle 2s ease-in-out infinite
 section.animated picture { animation: jump .6s ease-in-out infinite; display: block; }
 
 section.animated img { animation: flip .5s steps(1, end) infinite; }
+
+@keyframes flip {
+
+    0%, 100% { transform: scaleX(1); }
+
+    50% { transform: scaleX(-1); }
+}
+
+@keyframes jump {
+
+    0%, 100% { transform: translateY(0); }
+
+    50% { transform: translateY(3rem); }
+}
+
+@keyframes wiggle {
+
+    0%, 100% { transform: translateX(0) }
+
+    50% { transform: translateX(25%); }
+}
 
 section.contact-card {
     background-color: #ffffff;
@@ -153,27 +174,54 @@ section.contact-card address { font-style: unset; }
     #apple-maps { display: block; }
 }
 
+form { background-color: white; padding: 1rem; }
+
+form label { display: block; }
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form input[type="date"],
+form select,
+form textarea {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding: 1em;
+    width: 100%;
+}
+
+form input[type="number"] { display: block; width: unset; }
+
+form select { appearance: none; background-color: #ccc; }
+
+form div.name {
+    display: flex;
+    gap: 1rem;
+}
+
+form div.name div {
+    flex-grow: 1;
+}
+
+form div.dates { display: flex; gap: 1rem;}
+
+form textarea { height: 12em; resize: none; }
+
+form button {
+    background-color: #004080;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 1em;
+}
+
+form button:hover { background-color: #003366 }
+
 @media (max-width: 768px) {
     section.contact-card figure{ display: none; }
-}
-
-@keyframes flip {
-
-    0%, 100% { transform: scaleX(1); }
-
-    50% { transform: scaleX(-1); }
-}
-
-@keyframes jump {
-
-    0%, 100% { transform: translateY(0); }
-
-    50% { transform: translateY(3rem); }
-}
-
-@keyframes wiggle {
-
-    0%, 100% { transform: translateX(0) }
-
-    50% { transform: translateX(25%); }
+    form div.name {
+        display: block;
+    }
 }
