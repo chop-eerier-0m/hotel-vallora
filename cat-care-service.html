@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css">
+    <title>Hotel Vallora - Katzenbetreuung</title>
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 60vh;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .price-card {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            border: none;
+        }
+        
+        .gallery-img {
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+        
+        .floating-icon {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .cat-paw {
+            color: #ff6b6b;
+            opacity: 0.1;
+            position: absolute;
+            font-size: 3rem;
+            animation: pawMove 8s linear infinite;
+        }
+        
+        @keyframes pawMove {
+            0% { transform: translateX(-100px) rotate(0deg); opacity: 0; }
+            10%, 90% { opacity: 0.1; }
+            100% { transform: translateX(calc(100vw + 100px)) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+
+<body class="bg-light position-relative overflow-x-hidden">
+    <!-- Floating cat paw animations -->
+    <i class="bi bi-heart-fill cat-paw" style="top: 10%; animation-delay: 0s;"></i>
+    <i class="bi bi-heart-fill cat-paw" style="top: 30%; animation-delay: 3s;"></i>
+    <i class="bi bi-heart-fill cat-paw" style="top: 60%; animation-delay: 6s;"></i>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="bi bi-house-heart-fill me-2"></i>
+                Hotel Vallora
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-house me-1"></i>Start</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-calendar-check me-1"></i>Buchung</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-cup-hot me-1"></i>Speisekarte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="bi bi-heart-fill me-1"></i>Katzenbetreuung</a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-auto">
+                    <input class="form-control me-2" type="search" placeholder="Suchen">
+                    <button class="btn btn-outline-light" type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Flexbox Layout) -->
+    <section class="hero-section d-flex align-items-center text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">
+                        <i class="bi bi-heart-fill text-warning floating-icon me-3"></i>
+                        Professionelle Katzenbetreuung
+                    </h1>
+                    <p class="lead mb-4 opacity-90">
+                        Während Sie Ihren Aufenthalt im Hotel Vallora genießen, kümmern wir uns liebevoll um Ihre Katze. 
+                        Unser erfahrenes Team sorgt dafür, dass sich Ihr vierbeiniger Freund wie zu Hause fühlt.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <button class="btn btn-warning btn-lg shadow">
+                            <i class="bi bi-calendar-plus me-2"></i>Jetzt Buchen
+                        </button>
+                        <button class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-info-circle me-2"></i>Mehr Erfahren
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             class="img-fluid rounded-circle shadow-lg opacity-90" 
+                             alt="Süße Katze" 
+                             style="max-width: 400px;">
+                        <div class="position-absolute top-0 start-0 bg-warning rounded-circle p-3 shadow floating-icon">
+                            <i class="bi bi-star-fill text-white fs-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid Section (CSS Grid Layout) -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-dark">
+                    <i class="bi bi-grid-3x3-gap-fill text-primary me-3"></i>
+                    Unsere Dienstleistungen
+                </h2>
+                <p class="lead text-muted">Alles was Ihre Katze für einen angenehmen Aufenthalt braucht</p>
+            </div>
+            
+            <!-- Using Bootstrap Grid System -->
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card h-100 shadow-sm border-0">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon">
+                                <i class="bi bi-house-heart text-white fs-1"></i>
+                            </div>
+                            <h4 class="card-title">Komfortable Unterbringung</h4>
+                            <p class="card-text text-muted">
+                                Gemütliche, klimatisierte Räume mit Spielbereich und Aussicht ins Grüne.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card h-100 shadow-sm border-0">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon">
+                                <i class="bi bi-heart-pulse text-white fs-1"></i>
+                            </div>
+                            <h4 class="card-title">Medizinische Betreuung</h4>
+                            <p class="card-text text-muted">
+                                24/7 Überwachung durch qualifizierte Tierpfleger und Tierarzt vor Ort.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card h-100 shadow-sm border-0">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon">
+                                <i class="bi bi-trophy text-white fs-1"></i>
+                            </div>
+                            <h4 class="card-title">Premium Verpflegung</h4>
+                            <p class="card-text text-muted">
+                                Hochwertiges Futter nach individuellen Bedürfnissen und Diätplänen.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card h-100 shadow-sm border-0">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon">
+                                <i class="bi bi-camera-video text-white fs-1"></i>
+                            </div>
+                            <h4 class="card-title">Live-Überwachung</h4>
+                            <p class="card-text text-muted">
+                                Sehen Sie Ihre Katze jederzeit über unsere sichere App-Verbindung.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card h-100 shadow-sm border-0">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon">
+                                <i class="bi bi-chat-heart text-white fs-1"></i>
+                            </div>
+                            <h4 class="card-title">Tägliche Updates</h4>
+                            <p class="card-text text-muted">
+                                Regelmäßige Foto- und Video-Updates über das Wohlbefinden Ihrer Katze.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card h-100 shadow-sm border-0">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon">
+                                <i class="bi bi-gem text-white fs-1"></i>
+                            </div>
+                            <h4 class="card-title">Wellness & Spa</h4>
+                            <p class="card-text text-muted">
+                                Fellpflege, Massage und Entspannungstherapie für Ihre Katze.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section with Overflow Handling -->
+    <section class="py-5 bg-primary bg-opacity-10">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-dark">
+                    <i class="bi bi-images text-success me-3"></i>
+                    Unsere Katzen-Oase
+                </h2>
+                <p class="lead text-muted">Ein Blick in unsere liebevoll gestalteten Räumlichkeiten</p>
+            </div>
+            
+            <!-- Horizontal Scrollable Gallery -->
+            <div class="overflow-auto">
+                <div class="d-flex gap-3 pb-3" style="width: max-content;">
+                    <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                         class="gallery-img rounded shadow" alt="Katzenspielbereich">
+                    <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                         class="gallery-img rounded shadow" alt="Katzenruhebereich">
+                    <img src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                         class="gallery-img rounded shadow" alt="Katzen beim Spielen">
+                    <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                         class="gallery-img rounded shadow" alt="Katzenbetreuung">
+                    <img src="https://images.unsplash.com/photo-1547955922-85c91bd7b03d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                         class="gallery-img rounded shadow" alt="Gemütliche Katzenecke">
+                    <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                         class="gallery-img rounded shadow" alt="Katzenfutter">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section (Container Layout with Flexbox) -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-dark">
+                    <i class="bi bi-currency-euro text-warning me-3"></i>
+                    Preise & Pakete
+                </h2>
+                <p class="lead text-muted">Transparente Preise für die beste Betreuung</p>
+            </div>
+            
+            <div class="row justify-content-center g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card price-card h-100 shadow-lg">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-star fs-1 mb-3 opacity-75"></i>
+                            <h4 class="card-title">Basis-Paket</h4>
+                            <div class="display-4 fw-bold mb-3">€25<small class="fs-6">/Tag</small></div>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle me-2"></i>Komfortable Unterbringung</li>
+                                <li class="mb-2"><i class="bi bi-check-circle me-2"></i>2x tägliche Fütterung</li>
+                                <li class="mb-2"><i class="bi bi-check-circle me-2"></i>Grundpflege</li>
+                                <li class="mb-2"><i class="bi bi-check-circle me-2"></i>Täglicher Gesundheitscheck</li>
+                            </ul>
+                            <button class="btn btn-light btn-lg w-100 mt-3">
+                                <i class="bi bi-cart-plus me-2"></i>Auswählen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-lg border-warning border-3 position-relative">
+                        <div class="position-absolute top-0 start-50 translate-middle">
+                            <span class="badge bg-warning text-dark px-3 py-2">
+                                <i class="bi bi-star-fill me-1"></i>Beliebt
+                            </span>
+                        </div>
+                        <div class="card-body text-center p-4 mt-3">
+                            <i class="bi bi-gem text-warning fs-1 mb-3"></i>
+                            <h4 class="card-title">Premium-Paket</h4>
+                            <div class="display-4 fw-bold mb-3 text-warning">€45<small class="fs-6 text-muted">/Tag</small></div>
+                            <ul class="list-unstyled text-start">
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Alle Basis-Leistungen</li>
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Live-Kamera Zugang</li>
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Tägliche Foto-Updates</li>
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Wellness & Spa</li>
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Premium Futter</li>
+                            </ul>
+                            <button class="btn btn-warning btn-lg w-100 mt-3">
+                                <i class="bi bi-crown me-2"></i>Auswählen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card price-card h-100 shadow-lg" style="background: linear-gradient(135deg, #a8e6cf, #26de81);">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-heart-fill fs-1 mb-3 opacity-75"></i>
+                            <h4 class="card-title">VIP-Paket</h4>
+                            <div class="display-4 fw-bold mb-3">€65<small class="fs-6">/Tag</small></div>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle me-2"></i>Alle Premium-Leistungen</li>
+                                <li class="mb-2"><i class="bi bi-check-circle me-2"></i>Private Suite</li>
+                                <li class="mb-2"><i class="bi bi-check-circle me-2"></i>24/7 Tierarzt-Hotline</li>
+                                <li class="mb-2"><i class="bi bi-check-circle me-2"></i>Persönlicher Betreuer</li>
+                            </ul>
+                            <button class="btn btn-light btn-lg w-100 mt-3">
+                                <i class="bi bi-diamond me-2"></i>Auswählen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (Flexbox with Opacity) -->
+    <section class="py-5 position-relative" style="background: linear-gradient(rgba(116, 185, 255, 0.1), rgba(116, 185, 255, 0.05));">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-dark">
+                    <i class="bi bi-chat-quote text-info me-3"></i>
+                    Was unsere Gäste sagen
+                </h2>
+                <p class="lead text-muted">Erfahrungen von zufriedenen Katzenbesitzern</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="card-text fst-italic opacity-75">
+                                "Meine Katze Whiskers hat sich sofort wohlgefühlt. Das Personal war unglaublich liebevoll und professionell!"
+                            </p>
+                            <div class="d-flex align-items-center mt-3">
+                                <div class="bg-primary rounded-circle p-2 me-3">
+                                    <i class="bi bi-person text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Sarah Müller</h6>
+                                    <small class="text-muted">München</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="testimonial-card card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="card-text fst-italic opacity-75">
+                                "Die Live-Kamera war fantastisch! Ich konnte jederzeit sehen, dass es meiner Luna gut geht. Absolut empfehlenswert!"
+                            </p>
+                            <div class="d-flex align-items-center mt-3">
+                                <div class="bg-success rounded-circle p-2 me-3">
+                                    <i class="bi bi-person text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Thomas Schmidt</h6>
+                                    <small class="text-muted">Berlin</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="testimonial-card card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="card-text fst-italic opacity-75">
+                                "Professioneller Service und meine Katze war nach dem Urlaub entspannter als je zuvor. Das Wellness-Programm ist einzigartig!"
+                            </p>
+                            <div class="d-flex align-items-center mt-3">
+                                <div class="bg-warning rounded-circle p-2 me-3">
+                                    <i class="bi bi-person text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Anna Weber</h6>
+                                    <small class="text-muted">Hamburg</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="display-6 fw-bold mb-4">
+                        <i class="bi bi-telephone text-success me-3"></i>
+                        Haben Sie Fragen?
+                    </h2>
+                    <p class="lead opacity-75 mb-4">
+                        Unser Team steht Ihnen gerne zur Verfügung und beantwortet alle Fragen rund um die Katzenbetreuung.
+                    </p>
+                    <div class="d-flex flex-column gap-3">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-phone text-success me-3 fs-4"></i>
+                            <span>+49 (0) 123 456-7890</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-envelope text-success me-3 fs-4"></i>
+                            <span>katzen@hotel-vallora.de</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-clock text-success me-3 fs-4"></i>
+                            <span>24/7 Erreichbar</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <button class="btn btn-success btn-lg shadow-lg">
+                        <i class="bi bi-calendar-check me-2"></i>
+                        Beratungstermin Vereinbaren
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 border-top border-secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-md-start">
+                    <p class="mb-0 opacity-75">© 2025 Hotel Vallora. Alle Rechte vorbehalten.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="d-flex justify-content-md-end justify-content-center gap-3 mt-2 mt-md-0">
+                        <i class="bi bi-facebook text-primary fs-4"></i>
+                        <i class="bi bi-instagram text-danger fs-4"></i>
+                        <i class="bi bi-twitter text-info fs-4"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

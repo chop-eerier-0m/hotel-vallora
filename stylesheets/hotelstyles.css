@@ -140,6 +140,33 @@ section.animated img {
     50% { transform: translateX(25%); }
 }
 
+.dish-card:hover, .drink-card:hover { background-color: rgba(0, 0, 0, 0.03); cursor: pointer; transition: all 0.3s ease; }
+
+.drink-card:nth-child(even):hover { transform: rotateZ(2deg) scale(1.03); }
+
+.drink-card:nth-child(odd):hover { transform: rotateZ(-2deg) scale(1.03); }
+
+.animated-section { animation: wiggle 2s ease-in-out infinite; margin-bottom: 5em; }
+
+.animated-picture { animation: jump 0.6s ease-in-out infinite; display: block; }
+
+.animated-img { animation: flip 0.5s steps(1, end) infinite; }
+
+@keyframes flip {
+    0%, 100% { transform: scaleX(1); }
+    50% { transform: scaleX(-1); }
+}
+
+@keyframes jump {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(3rem); }
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: translateX(0) }
+    50% { transform: translateX(25%); }
+}
+
 section.contact-card {
     background-color: #ffffff;
     border-radius: 12px;
