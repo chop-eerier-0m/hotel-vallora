@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Vallora - Admin Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/hotelstyles.css">
+    <link rel="stylesheet" href="../stylesheets/vallorastyles.css">
+</head>
+
+<body>
+    <iframe src="../components/nav.html" frameborder="0" width="100%" height="300px"></iframe>
+    <main>
+        <div class="container mt-4">
+            <h1 class="mb-4">Admin Dashboard Hotel Vallora - Finanzübersicht</h1>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card metric-card new-bookings">
+                        <div class="card-body p-0">
+                            <h5 class="card-title">Neue Buchungen</h5>
+                            <p class="metric-value">1 250</p>
+                            <p class="card-text">+15% diese Woche</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card metric-card revenue">
+                        <div class="card-body p-0">
+                            <h5 class="card-title">Umsatz</h5>
+                            <p class="metric-value">€8 540</p>
+                            <p class="card-text">+5,3% diesen Monat</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card metric-card new-orders">
+                        <div class="card-body p-0">
+                            <h5 class="card-title">Neue Bestellungen</h5>
+                            <p class="metric-value">364</p>
+                            <p class="card-text">-2% seit gestern</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card metric-card contact-inquiries">
+                        <div class="card-body p-0">
+                            <h5 class="card-title">Kontaktanfragen</h5>
+                            <p class="metric-value">42</p>
+                            <p class="card-text">-8% diese Woche</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-header bg-grey">
+                            <h5 class="mb-0">Neueste Transaktionen</h5>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Kunde</th>
+                                            <th>Datum</th>
+                                            <th>Betrag</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Maria Anders</td>
+                                            <td>10.02.2025</td>
+                                            <td>€120,50</td>
+                                            <td><span class="status-badge status-completed">Abgeschlossen</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Francisco Chang</td>
+                                            <td>09.02.2025</td>
+                                            <td>€750,00</td>
+                                            <td><span class="status-badge status-pending">Ausstehend</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Roland Mendel</td>
+                                            <td>08.02.2025</td>
+                                            <td>€87,30</td>
+                                            <td><span class="status-badge status-completed">Abgeschlossen</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Helen Bennett</td>
+                                            <td>08.02.2025</td>
+                                            <td>€293,80</td>
+                                            <td><span class="status-badge status-problem">Storniert</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-header bg-grey">
+                            <h5 class="mb-0">Aktive Benutzer</h5>
+                        </div>
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex align-items-center">
+                                    <div class="user-icon bg-blue me-3">JD</div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-0">Jane Doe</h6> <small class="text-muted">Online - Admin</small>
+                                    </div>
+                                    <div class="user-status status-online"></div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <div class="user-icon bg-green me-3">JS</div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-0">John Smith</h6> <small class="text-muted">Online -
+                                            Verkäufer</small>
+                                    </div>
+                                    <div class="user-status status-online"></div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <div class="user-icon bg-orange me-3">AL</div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-0">Anna Lindberg</h6> <small class="text-muted">Inaktiv -
+                                            Support</small>
+                                    </div>
+                                    <div class="user-status status-offline"></div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <div class="user-icon bg-red me-3">RB</div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-0">Robert Brown</h6> <small class="text-muted">Offline - Kunde</small>
+                                    </div>
+                                    <div class="user-status status-offline"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
